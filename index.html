@@ -167,7 +167,7 @@
 
   <div id="content-area">
     <div id="main-col">
-      <div class="section-title">Registration Form &mdash; Spring 2012</div>
+      <div class="section-title">Registration Form &mdash; Fall 2012</div>
       <div class="form-intro">
         <strong>Welcome!</strong> Please complete all required fields below to register as a member of the UMA Chess Club.
         A confirmation will be sent to your UMA email address. For questions, contact us at <a href="/cdn-cgi/l/email-protection#6c0f04091f1f2c19010d42090819"><span class="__cf_email__" data-cfemail="8eede6ebfdfdcefbe3efa0ebeafb">[email&#160;protected]</span></a>.
@@ -208,6 +208,11 @@
       </select>
     </div>
     <div class="form-row">
+      <label>FIDE / Club ELO Rating <span style="color:#888;font-weight:normal;">(optional)</span></label>
+      <input type="text" id="elo" placeholder="e.g. 1450" />
+      <div class="hint">Leave blank if unknown. ELO ratings range from ~800 (beginner) to 2800+ (grandmaster).</div>
+    </div>
+    <div class="form-row">
       <label>Preferred Session Day <span class="required">*</span></label>
       <select id="day">
         <option value="">-- Please select --</option>
@@ -231,17 +236,31 @@
     </div>
     <hr class="form-divider" />
     <div class="btn-row">
-      <input type="button" class="btn-submit" value="Submit Registration &raquo;" onclick="submitForm()" />
-      <input type="button" class="btn-reset" value="Clear Form" onclick="clearForm()" />
+      <input type="button" class="btn-submit" value="Submit Registration &raquo;" onclick="sendForm()" />
+      <input type="button" class="btn-reset" value="Clear Form" onclick="resetForm()" />
     </div>
   </div>
 
   <div id="success-msg">
     <strong>&#10003; Your registration has been received!</strong><br />
     Thank you for joining the UMA Chess Club. A confirmation email has been sent to your UMA address.
-    We look forward to seeing you at our next open session.<br />
-    <img src="55405900-7EEE-4EDD-863B-1872FC696551.jpeg" alt="Welcome to UMA Chess Club" />
+    We look forward to seeing you at our next open session.<br /><br />
     <em>&mdash; The UMA Chess Club Board</em>
+  </div>
+
+  <div id="missing-notice" style="display:none; margin-top:14px; border:2px solid #c8a800; background:#fffdf0;">
+    <div style="background:#c8a800; padding:7px 12px; font-size:12px; font-weight:bold; color:#fff; text-transform:uppercase; letter-spacing:0.05em;">
+      &#9888; Community Notice &mdash; Missing Person
+    </div>
+    <div style="padding:12px 14px; font-size:12px; color:#3a2e00; line-height:1.7;">
+      This notice was added at the request of <em>Glinda Ravingfool</em>, a popular member of our student community, on behalf of club member <em>Elias Green</em>, whose sister <strong>Anna Green</strong> has been missing since <strong>July 13th, 2012</strong>.<br /><br />
+      If you have any information about Anna's whereabouts, please contact the Augusta Police Department at <strong>(08) 9758 3900</strong>.<br /><br />
+      <em>The UMA Chess Club stands with Elias and his family.</em>
+    </div>
+    <div style="text-align:center; padding:0 14px 14px;">
+      <img src="55405900-7EEE-4EDD-863B-1872FC696551.jpeg" alt="Missing person notice — Anna Green"
+           style="max-width:100%; height:auto; border:3px solid #c8a800; box-shadow:2px 2px 6px rgba(0,0,0,0.25);" />
+    </div>
   </div>
 </div>
 
@@ -274,7 +293,7 @@
       </ul>
     </div>
   </div>
-  <div class="side-updated">Last updated:<br />January 14, 2012</div>
+  <div class="side-updated">Last updated:<br />September 8, 2012</div>
 </div>
 ```
 
@@ -287,13 +306,22 @@
   </div>
 
 </div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
-  function submitForm() {
+<script type="text/javascript">
+  function sendForm() {
     document.getElementById('form-area').style.display = 'none';
     document.getElementById('success-msg').style.display = 'block';
+    document.getElementById('missing-notice').style.display = 'block';
   }
-  function clearForm() {
+  function resetForm() {
     document.getElementById('fname').value = '';
     document.getElementById('email').value = '';
     document.getElementById('sid').value = '';
-    document.ge
+    document.getElementById('phone').value = '';
+    document.getElementById('elo').value = '';
+    document.getElementById('level').selectedIndex = 0;
+    document.getElementById('day').selectedIndex = 0;
+    document.getElementById('source').selectedIndex = 0;
+  }
+</script>
+</body>
+</html>
