@@ -1,10 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UMA Chess Club &mdash; Membership Registration</title>
+  <title>Club d&apos;Echecs UMA : Formulaire d&apos;inscription</title>
   <style type="text/css">
     * { box-sizing: border-box; }
     body {
@@ -64,7 +64,6 @@
       background: #ddeeff; border: 1px solid #a8c8e8; border-left: 4px solid #003057;
       padding: 9px 12px; margin-bottom: 14px; font-size: 12px; color: #003057; line-height: 1.5;
     }
-    .form-intro a { color: #003057; }
     .required-note { font-size: 10px; color: #778899; margin-bottom: 12px; font-style: italic; }
     .required { color: #cc0000; }
     .form-row { margin-bottom: 11px; }
@@ -96,7 +95,6 @@
       border-left: 4px solid #A4D65E; padding: 14px 16px;
       color: #2d5a1a; font-size: 13px; line-height: 1.6; margin-top: 10px;
     }
-    #success-msg img { display: block; max-width: 100%; height: auto; margin: 14px auto 10px; border: 3px solid #003057; box-shadow: 2px 2px 6px rgba(0,0,0,0.25); }
     .side-box { flex: 1 1 180px; background: #fff; border: 1px solid #b8d0e4; margin-bottom: 0; }
     .side-box-title {
       background: linear-gradient(to bottom, #1a5a8a 0%, #003057 100%);
@@ -143,122 +141,127 @@
     <div id="topbar-inner">
       <img src="SIX_57A22B16-AFDD-492C-98CC-D33A80036D4F.png" alt="University of Maine at Augusta" />
       <div id="tagline-cell">
-        Student Organizations &amp; Activities<br />
+        Organisations &amp; Activit&eacute;s &Eacute;tudiantes<br />
         <span style="font-size:10px;color:#567a90;">uma.edu &nbsp;&bull;&nbsp; Augusta, Maine 04330</span>
       </div>
     </div>
   </div>
 
   <div id="navbar">
-    <a href="#">Home</a>
-    <a href="#">About UMA</a>
-    <a href="#">Student Life</a>
-    <a href="#" class="active">Clubs &amp; Orgs</a>
-    <a href="#">Chess Club</a>
+    <a href="#">Accueil</a>
+    <a href="#">&Agrave; propos</a>
+    <a href="#">Vie &eacute;tudiante</a>
+    <a href="#" class="active">Clubs &amp; Assoc.</a>
+    <a href="#">Club d&apos;&eacute;checs</a>
     <a href="#">Contact</a>
   </div>
 
   <div id="page-title">
     <div class="breadcrumb">
-      <a href="#">Home</a> &rsaquo; <a href="#">Student Life</a> &rsaquo; <a href="#">Clubs &amp; Organizations</a> &rsaquo; <strong>Chess Club &mdash; Registration</strong>
+      <a href="#">Accueil</a> &rsaquo; <a href="#">Vie &eacute;tudiante</a> &rsaquo; <a href="#">Clubs &amp; Associations</a> &rsaquo; <strong>Club d&apos;&eacute;checs : Inscription</strong>
     </div>
-    <h1>&#9822; UMA Chess Club &mdash; Membership Registration Form</h1>
+    <h1>&#9822; Club d&apos;&Eacute;checs UMA : Formulaire d&apos;adh&eacute;sion</h1>
   </div>
 
   <div id="content-area">
     <div id="main-col">
-      <div class="section-title">Registration Form &mdash; Fall 2012</div>
+      <div class="section-title">Formulaire d&apos;inscription, Automne 2012</div>
       <div class="form-intro">
-        <strong>Welcome!</strong> Please complete all required fields below to register as a member of the UMA Chess Club.
-        A confirmation will be sent to your UMA email address.
+        <strong>Bienvenue !</strong> Veuillez remplir tous les champs obligatoires ci-dessous pour vous inscrire au Club d&apos;&Eacute;checs de l&apos;UMA.
+        Une confirmation sera envoy&eacute;e &agrave; votre adresse UMA.
       </div>
 
 ```
   <div id="form-area">
-    <p class="required-note">Fields marked <span class="required">*</span> are required.</p>
-    <div class="section-title" style="font-size:11px;">Section 1 &mdash; Personal Information</div>
+    <p class="required-note">Les champs marqu&eacute;s d&apos;un <span class="required">*</span> sont obligatoires.</p>
+
+    <div class="section-title" style="font-size:11px;">Section 1 : Informations personnelles</div>
+
     <div class="form-row">
-      <label>Full Name <span class="required">*</span></label>
-      <input type="text" id="fname" placeholder="First and Last Name" />
+      <label>Nom complet <span class="required">*</span></label>
+      <input type="text" id="fname" placeholder="Pr&eacute;nom et Nom" />
     </div>
     <div class="form-row">
-      <label>UMA Email Address <span class="required">*</span></label>
-      <input type="email" id="email" placeholder="username@uma.edu" />
-      <div class="hint">Please use your official @uma.edu address.</div>
+      <label>Adresse e-mail UMA <span class="required">*</span></label>
+      <input type="email" id="email" placeholder="identifiant@uma.edu" />
+      <div class="hint">Veuillez utiliser votre adresse officielle @uma.edu.</div>
     </div>
     <div class="form-row">
-      <label>Student ID Number <span class="required">*</span></label>
-      <input type="text" id="sid" placeholder="e.g. 123456" />
-      <div class="hint">Your 6-digit UMA student ID, found on your student card.</div>
+      <label>Num&eacute;ro &eacute;tudiant <span class="required">*</span></label>
+      <input type="text" id="sid" placeholder="ex. 123456" />
+      <div class="hint">Votre identifiant &eacute;tudiant UMA &agrave; 6 chiffres, figurant sur votre carte &eacute;tudiante.</div>
     </div>
     <div class="form-row">
-      <label>Phone Number <span style="color:#888;font-weight:normal;">(optional)</span></label>
+      <label>T&eacute;l&eacute;phone <span style="color:#888;font-weight:normal;">(facultatif)</span></label>
       <input type="text" id="phone" placeholder="(207) 000-0000" />
     </div>
+
     <hr class="form-divider" />
-    <div class="section-title" style="font-size:11px;">Section 2 &mdash; Club Information</div>
+    <div class="section-title" style="font-size:11px;">Section 2 : Informations sur le club</div>
+
     <div class="form-row">
-      <label>Chess Experience Level <span class="required">*</span></label>
+      <label>Niveau aux &eacute;checs <span class="required">*</span></label>
       <select id="level">
-        <option value="">-- Please select --</option>
-        <option>Complete Beginner (never played)</option>
-        <option>Casual Player (know the rules)</option>
-        <option>Intermediate (plays regularly)</option>
-        <option>Advanced / Competitive</option>
+        <option value="">-- Veuillez s&eacute;lectionner --</option>
+        <option>D&eacute;butant complet (jamais jou&eacute;)</option>
+        <option>Joueur occasionnel (conna&icirc;t les r&egrave;gles)</option>
+        <option>Interm&eacute;diaire (joue r&eacute;guli&egrave;rement)</option>
+        <option>Avanc&eacute; / Comp&eacute;titeur</option>
       </select>
     </div>
     <div class="form-row">
-      <label>FIDE / Club ELO Rating <span style="color:#888;font-weight:normal;">(optional)</span></label>
-      <input type="text" id="elo" placeholder="e.g. 1450" />
-      <div class="hint">Leave blank if unknown. ELO ratings range from ~800 (beginner) to 2800+ (grandmaster).</div>
+      <label>Classement ELO FIDE / club <span style="color:#888;font-weight:normal;">(facultatif)</span></label>
+      <input type="text" id="elo" placeholder="ex. 1450" />
+      <div class="hint">Laissez vide si inconnu. Le classement ELO va de ~800 (d&eacute;butant) &agrave; 2800+ (grand ma&icirc;tre).</div>
     </div>
     <div class="form-row">
-      <label>Preferred Session Day <span class="required">*</span></label>
+      <label>S&eacute;ance pr&eacute;f&eacute;r&eacute;e <span class="required">*</span></label>
       <select id="day">
-        <option value="">-- Please select --</option>
-        <option>Monday</option>
-        <option>Wednesday</option>
-        <option>Friday</option>
-        <option>No preference</option>
+        <option value="">-- Veuillez s&eacute;lectionner --</option>
+        <option>Lundi</option>
+        <option>Mercredi</option>
+        <option>Vendredi</option>
+        <option>Pas de pr&eacute;f&eacute;rence</option>
       </select>
     </div>
     <div class="form-row">
-      <label>How did you hear about us? <span class="required">*</span></label>
+      <label>Comment avez-vous entendu parler du club ? <span class="required">*</span></label>
       <select id="source">
-        <option value="">-- Please select --</option>
-        <option>UMA Website</option>
-        <option>Instagram / Social Media</option>
-        <option>Campus Flyer / Poster</option>
-        <option>Friend or Classmate</option>
-        <option>UMA Orientation</option>
-        <option>Other</option>
+        <option value="">-- Veuillez s&eacute;lectionner --</option>
+        <option>Site web UMA</option>
+        <option>Instagram / R&eacute;seaux sociaux</option>
+        <option>Affiche / Flyer sur le campus</option>
+        <option>Ami(e) ou camarade de classe</option>
+        <option>Journ&eacute;e d&apos;int&eacute;gration UMA</option>
+        <option>Autre</option>
       </select>
     </div>
+
     <hr class="form-divider" />
     <div class="btn-row">
-      <input type="button" class="btn-submit" value="Submit Registration &raquo;" onclick="sendForm()" />
-      <input type="button" class="btn-reset" value="Clear Form" onclick="resetForm()" />
+      <input type="button" class="btn-submit" value="Soumettre l&apos;inscription &raquo;" onclick="sendForm()" />
+      <input type="button" class="btn-reset" value="R&eacute;initialiser" onclick="resetForm()" />
     </div>
   </div>
 
   <div id="success-msg">
-    <strong>&#10003; Your registration has been received!</strong><br />
-    Thank you for joining the UMA Chess Club. A confirmation email has been sent to your UMA address.
-    We look forward to seeing you at our next open session.<br /><br />
-    <em>&mdash; The UMA Chess Club Board</em>
+    <strong>&#10003; Votre inscription a bien &eacute;t&eacute; re&ccedil;ue !</strong><br />
+    Merci de rejoindre le Club d&apos;&Eacute;checs de l&apos;UMA. Une confirmation a &eacute;t&eacute; envoy&eacute;e &agrave; votre adresse UMA.
+    Nous avons h&acirc;te de vous retrouver lors de notre prochaine s&eacute;ance ouverte.<br /><br />
+    <em>Le Bureau du Club d&apos;&Eacute;checs UMA</em>
   </div>
 
   <div id="missing-notice" style="display:none; margin-top:14px; border:2px solid #c8a800; background:#fffdf0;">
     <div style="background:#c8a800; padding:7px 12px; font-size:12px; font-weight:bold; color:#fff; text-transform:uppercase; letter-spacing:0.05em;">
-      &#9888; Community Notice &mdash; Missing Person
+      &#9888; Avis communautaire : Personne disparue
     </div>
     <div style="padding:12px 14px; font-size:12px; color:#3a2e00; line-height:1.7;">
-      This notice was added at the request of <em>Glinda Ravingfool</em>, a member of our club, on behalf of <em>Elias Green</em>, whose sister <strong>Anna Green</strong> has been missing since <strong>July 13th, 2012</strong>.<br /><br />
-      If you have any information about Anna's whereabouts, please contact the Augusta Police Department at <strong>(08) 9758 3900</strong>.<br /><br />
-      <em>The UMA Chess Club stands with Elias and his family.</em>
+      Cet avis a &eacute;t&eacute; ajout&eacute; &agrave; la demande de <em>Glinda Ravingfool</em> et <em>Drew Buckley</em>, membres de notre club, en soutien &agrave; <em>Elias Green</em>, dont la s&oelig;ur <strong>Anna Green</strong> a disparu depuis le <strong>13 juillet 2012</strong>.<br /><br />
+      Si vous avez la moindre information sur l&apos;endroit o&ugrave; se trouve Anna, veuillez contacter le d&eacute;partement de police d&apos;Augusta au <strong>(08) 9758 3900</strong>.<br /><br />
+      <em>Le Club d&apos;&Eacute;checs de l&apos;UMA soutient Elias et sa famille.</em>
     </div>
     <div style="text-align:center; padding:0 14px 14px;">
-      <img src="55405900-7EEE-4EDD-863B-1872FC696551.jpeg" alt="Missing person notice — Anna Green"
+      <img src="55405900-7EEE-4EDD-863B-1872FC696551.jpeg" alt="Avis de recherche Anna Green"
            style="max-width:100%; height:auto; border:3px solid #c8a800; box-shadow:2px 2px 6px rgba(0,0,0,0.25);" />
     </div>
   </div>
@@ -267,35 +270,35 @@
 <div id="side-col">
   <div class="side-boxes-row">
     <div class="side-box">
-      <div class="side-box-title">&#9822; About the Club</div>
+      <div class="side-box-title">&#9822; Le Club</div>
       <div class="side-box-body">
         <div class="side-chess">&#9812;</div>
-        The UMA Chess Club welcomes players of all skill levels &mdash; from total beginners to seasoned competitors.
+        Le Club d&apos;&Eacute;checs UMA accueille les joueurs de tous niveaux, des grands d&eacute;butants aux comp&eacute;titeurs confirm&eacute;s.
       </div>
     </div>
     <div class="side-box">
-      <div class="side-box-title">Open Sessions</div>
+      <div class="side-box-title">S&eacute;ances ouvertes</div>
       <div class="side-box-body">
         <ul>
-          <li><strong>Mon &amp; Wed</strong><br />12:00 &ndash; 2:00 PM</li>
-          <li><strong>Friday</strong><br />3:00 &ndash; 5:00 PM</li>
+          <li><strong>Lun. &amp; Mer.</strong><br />12h00 &ndash; 14h00</li>
+          <li><strong>Vendredi</strong><br />15h00 &ndash; 17h00</li>
         </ul>
-        <br />Location: Student Center,<br />Room 114
+        <br />Lieu : Centre &eacute;tudiant,<br />Salle 114
       </div>
     </div>
     <div class="side-box">
-      <div class="side-box-title">Quick Links</div>
+      <div class="side-box-title">Liens rapides</div>
       <div class="side-box-body">
         <ul>
-          <li><a href="#">Club Calendar</a></li>
-          <li><a href="#">Tournament Info</a></li>
-          <li><a href="#">Contact Advisor</a></li>
-          <li><a href="#">UMA Student Life</a></li>
+          <li><a href="#">Calendrier du club</a></li>
+          <li><a href="#">Tournois</a></li>
+          <li><a href="#">Contacter le responsable</a></li>
+          <li><a href="#">Vie &eacute;tudiante UMA</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="side-updated">Last updated:<br />September 8, 2012</div>
+  <div class="side-updated">Derni&egrave;re mise &agrave; jour :<br />8 septembre 2012</div>
 </div>
 ```
 
@@ -303,8 +306,8 @@
 
   <div id="footer">
     University of Maine at Augusta &nbsp;&bull;&nbsp; 46 University Drive, Augusta, ME 04330<br />
-    &copy; 2012 University of Maine at Augusta. All rights reserved.<br />
-    <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Accessibility</a> &nbsp;|&nbsp; <a href="#">Contact Webmaster</a>
+    &copy; 2012 University of Maine at Augusta. Tous droits r&eacute;serv&eacute;s.<br />
+    <a href="#">Politique de confidentialit&eacute;</a> &nbsp;|&nbsp; <a href="#">Accessibilit&eacute;</a> &nbsp;|&nbsp; <a href="#">Contacter le webmaster</a>
   </div>
 
 </div>
@@ -318,4 +321,12 @@
     document.getElementById('fname').value = '';
     document.getElementById('email').value = '';
     document.getElementById('sid').value = '';
-    document.getElementById('phone').valu
+    document.getElementById('phone').value = '';
+    document.getElementById('elo').value = '';
+    document.getElementById('level').selectedIndex = 0;
+    document.getElementById('day').selectedIndex = 0;
+    document.getElementById('source').selectedIndex = 0;
+  }
+</script>
+</body>
+</html>
