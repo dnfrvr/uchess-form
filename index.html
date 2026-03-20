@@ -30,7 +30,7 @@
       justify-content: space-between;
       flex-wrap: wrap; padding: 14px 20px; gap: 10px;
     }
-    #topbar-inner img { display: block; width: 240px; max-width: 100%; height: auto; }
+    #topbar-inner img { display: block; width: 140px; max-width: 100%; height: auto; }
     #tagline-cell { color: #7aaccf; font-size: 11px; font-style: italic; text-align: right; line-height: 1.6; }
     #navbar {
       background: linear-gradient(to bottom, #1a5a8a 0%, #003057 100%);
@@ -121,11 +121,11 @@
 @media screen and (max-width: 580px) {
   #wrapper { margin: 0; border: none; box-shadow: none; }
   #topbar-inner { flex-direction: column; align-items: flex-start; padding: 10px 14px; }
-  #topbar-inner img { width: 190px; }
+  #topbar-inner img { width: 110px; }
   #tagline-cell { text-align: left; }
   #content-area { flex-direction: column; }
-  #side-col { flex: none; width: 100%; border-left: none; border-top: 2px solid #A4D65E; display: flex; flex-wrap: wrap; gap: 10px; padding: 12px; }
-  .side-box { flex: 1 1 140px; margin-bottom: 0; }
+  #side-col { flex: none; width: 100%; border-left: none; border-top: 2px solid #A4D65E; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 12px; }
+  .side-box { margin-bottom: 0; }
   .side-chess, .side-updated { display: none; }
   .btn-row { flex-direction: column; }
   .btn-submit, .btn-reset { width: 100%; text-align: center; padding: 10px; }
@@ -141,7 +141,7 @@
 
   <div id="topbar">
     <div id="topbar-inner">
-      <img src="IMG_9969.png" alt="University of Maine at Augusta" />
+      <img src="SIX_57A22B16-AFDD-492C-98CC-D33A80036D4F.png" alt="University of Maine at Augusta" />
       <div id="tagline-cell">
         Student Organizations &amp; Activities<br />
         <span style="font-size:10px;color:#567a90;">uma.edu &nbsp;&bull;&nbsp; Augusta, Maine 04330</span>
@@ -170,7 +170,7 @@
       <div class="section-title">Registration Form &mdash; Spring 2012</div>
       <div class="form-intro">
         <strong>Welcome!</strong> Please complete all required fields below to register as a member of the UMA Chess Club.
-        A confirmation will be sent to your UMA email address. For questions, contact us at <a href="mailto:chess@uma.edu">chess@uma.edu</a>.
+        A confirmation will be sent to your UMA email address. For questions, contact us at <a href="/cdn-cgi/l/email-protection#6c0f04091f1f2c19010d42090819"><span class="__cf_email__" data-cfemail="8eede6ebfdfdcefbe3efa0ebeafb">[email&#160;protected]</span></a>.
       </div>
 
 ```
@@ -287,7 +287,7 @@
   </div>
 
 </div>
-<script type="text/javascript">
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
   function submitForm() {
     document.getElementById('form-area').style.display = 'none';
     document.getElementById('success-msg').style.display = 'block';
@@ -296,11 +296,4 @@
     document.getElementById('fname').value = '';
     document.getElementById('email').value = '';
     document.getElementById('sid').value = '';
-    document.getElementById('phone').value = '';
-    document.getElementById('level').selectedIndex = 0;
-    document.getElementById('day').selectedIndex = 0;
-    document.getElementById('source').selectedIndex = 0;
-  }
-</script>
-</body>
-</html>
+    document.ge
