@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UMA Chess Club &mdash; Membership Registration</title>
+  <style type="text/css">
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 0;
+      background-color: #aab4be;
+      background-image: repeating-linear-gradient(45deg, transparent, transparent 3px, rgba(0,0,0,0.04) 3px, rgba(0,0,0,0.04) 6px);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px; color: #222;
+    }
+    #wrapper {
+      width: 100%; max-width: 760px;
+      margin: 16px auto 40px auto;
+      background: #eef0f2;
+      border: 1px solid #7a8a96;
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.35);
+    }
+    #topbar {
+      background: linear-gradient(to bottom, #004a8a 0%, #003057 60%, #001e38 100%);
+      border-bottom: 4px solid #A4D65E;
+    }
+    #topbar-inner {
+      display: flex; align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap; padding: 14px 20px; gap: 10px;
+    }
+    #topbar-inner img { display: block; width: 240px; max-width: 100%; height: auto; }
+    #tagline-cell { color: #7aaccf; font-size: 11px; font-style: italic; text-align: right; line-height: 1.6; }
+    #navbar {
+      background: linear-gradient(to bottom, #1a5a8a 0%, #003057 100%);
+      border-top: 1px solid #1a5a8a; border-bottom: 2px solid #001830;
+      overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch;
+    }
+    #navbar a {
+      display: inline-block; color: #c8e0f8; text-decoration: none;
+      font-size: 12px; font-weight: bold; padding: 7px 13px;
+      border-right: 1px solid #1a5a8a;
+    }
+    #navbar a:hover, #navbar a.active { background-color: #A4D65E; color: #003057; }
+    #page-title {
+      background: linear-gradient(to bottom, #eef3f8 0%, #d8e4ef 100%);
+      border-bottom: 1px solid #b0c4d8; padding: 10px 18px;
+    }
+    #page-title h1 { margin: 4px 0 0 0; font-size: 16px; color: #003057; font-family: 'Times New Roman', Georgia, serif; }
+    .breadcrumb { font-size: 10px; color: #7a9ab0; }
+    .breadcrumb a { color: #004e99; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    #content-area { display: flex; align-items: flex-start; flex-wrap: wrap; }
+    #main-col { flex: 1 1 320px; padding: 16px 18px; min-width: 0; }
+    #side-col { flex: 0 0 178px; background: #dfe9f3; border-left: 1px solid #b8d0e4; padding: 14px 12px; }
+    .section-title {
+      font-size: 12px; font-weight: bold; color: #003057;
+      border-bottom: 2px solid #A4D65E; padding-bottom: 4px;
+      margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .form-intro {
+      background: #ddeeff; border: 1px solid #a8c8e8; border-left: 4px solid #003057;
+      padding: 9px 12px; margin-bottom: 14px; font-size: 12px; color: #003057; line-height: 1.5;
+    }
+    .form-intro a { color: #003057; }
+    .required-note { font-size: 10px; color: #778899; margin-bottom: 12px; font-style: italic; }
+    .required { color: #cc0000; }
+    .form-row { margin-bottom: 11px; }
+    .form-row label { display: block; font-size: 12px; font-weight: bold; color: #333; margin-bottom: 3px; }
+    .form-row input[type="text"], .form-row input[type="email"], .form-row select {
+      width: 100%; padding: 5px 7px; font-size: 12px; font-family: Arial, Helvetica, sans-serif;
+      border: 1px solid #9ab5c8; border-top-color: #6a90a8; border-left-color: #6a90a8;
+      background: #fff; color: #222; box-shadow: inset 1px 1px 3px rgba(0,0,0,0.1);
+    }
+    .form-row input:focus, .form-row select:focus { border-color: #003057; outline: none; background: #f0f7ff; }
+    .hint { font-size: 10px; color: #778899; margin-top: 2px; font-style: italic; }
+    .form-divider { border: none; border-top: 1px dashed #b0c8d8; margin: 14px 0; }
+    .btn-row { margin-top: 16px; padding-top: 12px; border-top: 1px solid #b0c4d8; display: flex; flex-wrap: wrap; gap: 8px; }
+    .btn-submit {
+      background: linear-gradient(to bottom, #1a5a8a 0%, #003057 55%, #001e38 100%);
+      color: #fff; border: 1px solid #001830; border-bottom-color: #000;
+      padding: 7px 20px; font-size: 13px; font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif; cursor: pointer;
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+    .btn-submit:hover { background: linear-gradient(to bottom, #b8e070 0%, #A4D65E 60%, #88c040 100%); color: #003057; border-color: #70a030; }
+    .btn-reset {
+      background: linear-gradient(to bottom, #e4eaf0 0%, #c8d4dc 100%);
+      color: #444; border: 1px solid #a0b0c0; padding: 7px 14px; font-size: 12px;
+      font-family: Arial, Helvetica, sans-serif; cursor: pointer;
+    }
+    #success-msg {
+      display: none; background: #dff0d8; border: 1px solid #8abf6a;
+      border-left: 4px solid #A4D65E; padding: 14px 16px;
+      color: #2d5a1a; font-size: 13px; line-height: 1.6; margin-top: 10px;
+    }
+    #success-msg img { display: block; max-width: 100%; height: auto; margin: 14px auto 10px; border: 3px solid #003057; box-shadow: 2px 2px 6px rgba(0,0,0,0.25); }
+    .side-box { background: #fff; border: 1px solid #b8d0e4; margin-bottom: 12px; }
+    .side-box-title {
+      background: linear-gradient(to bottom, #1a5a8a 0%, #003057 100%);
+      color: #A4D65E; font-size: 11px; font-weight: bold;
+      text-transform: uppercase; letter-spacing: 0.05em; padding: 5px 8px;
+    }
+    .side-box-body { padding: 9px 10px; font-size: 11px; color: #334455; line-height: 1.6; }
+    .side-box-body ul { margin: 4px 0 0 14px; padding: 0; }
+    .side-box-body li { margin-bottom: 4px; }
+    .side-box-body a { color: #004e99; text-decoration: none; }
+    .side-box-body a:hover { text-decoration: underline; }
+    .side-chess { text-align: center; font-size: 34px; padding: 6px 0 2px; }
+    .side-updated { font-size: 10px; color: #8899aa; text-align: center; margin-top: 6px; }
+    #footer {
+      background: linear-gradient(to bottom, #003057 0%, #001530 100%);
+      border-top: 3px solid #A4D65E; padding: 10px 18px;
+      text-align: center; color: #6a8eaa; font-size: 10px; line-height: 1.8;
+    }
+    #footer a { color: #A4D65E; text-decoration: none; }
+    #footer a:hover { text-decoration: underline; }
+
+```
+@media screen and (max-width: 580px) {
+  #wrapper { margin: 0; border: none; box-shadow: none; }
+  #topbar-inner { flex-direction: column; align-items: flex-start; padding: 10px 14px; }
+  #topbar-inner img { width: 190px; }
+  #tagline-cell { text-align: left; }
+  #content-area { flex-direction: column; }
+  #side-col { flex: none; width: 100%; border-left: none; border-top: 2px solid #A4D65E; display: flex; flex-wrap: wrap; gap: 10px; padding: 12px; }
+  .side-box { flex: 1 1 140px; margin-bottom: 0; }
+  .side-chess, .side-updated { display: none; }
+  .btn-row { flex-direction: column; }
+  .btn-submit, .btn-reset { width: 100%; text-align: center; padding: 10px; }
+  #main-col { padding: 14px; }
+  #page-title h1 { font-size: 14px; }
+}
+```
+
+  </style>
+</head>
+<body>
+<div id="wrapper">
+
+  <div id="topbar">
+    <div id="topbar-inner">
+      <img src="IMG_9969.png" alt="University of Maine at Augusta" />
+      <div id="tagline-cell">
+        Student Organizations &amp; Activities<br />
+        <span style="font-size:10px;color:#567a90;">uma.edu &nbsp;&bull;&nbsp; Augusta, Maine 04330</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="navbar">
+    <a href="#">Home</a>
+    <a href="#">About UMA</a>
+    <a href="#">Student Life</a>
+    <a href="#" class="active">Clubs &amp; Orgs</a>
+    <a href="#">Chess Club</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <div id="page-title">
+    <div class="breadcrumb">
+      <a href="#">Home</a> &rsaquo; <a href="#">Student Life</a> &rsaquo; <a href="#">Clubs &amp; Organizations</a> &rsaquo; <strong>Chess Club &mdash; Registration</strong>
+    </div>
+    <h1>&#9822; UMA Chess Club &mdash; Membership Registration Form</h1>
+  </div>
+
+  <div id="content-area">
+    <div id="main-col">
+      <div class="section-title">Registration Form &mdash; Spring 2012</div>
+      <div class="form-intro">
+        <strong>Welcome!</strong> Please complete all required fields below to register as a member of the UMA Chess Club.
+        A confirmation will be sent to your UMA email address. For questions, contact us at <a href="mailto:chess@uma.edu">chess@uma.edu</a>.
+      </div>
+
+```
+  <div id="form-area">
+    <p class="required-note">Fields marked <span class="required">*</span> are required.</p>
+    <div class="section-title" style="font-size:11px;">Section 1 &mdash; Personal Information</div>
+    <div class="form-row">
+      <label>Full Name <span class="required">*</span></label>
+      <input type="text" id="fname" placeholder="First and Last Name" />
+    </div>
+    <div class="form-row">
+      <label>UMA Email Address <span class="required">*</span></label>
+      <input type="email" id="email" placeholder="username@uma.edu" />
+      <div class="hint">Please use your official @uma.edu address.</div>
+    </div>
+    <div class="form-row">
+      <label>Student ID Number <span class="required">*</span></label>
+      <input type="text" id="sid" placeholder="e.g. 123456" />
+      <div class="hint">Your 6-digit UMA student ID, found on your student card.</div>
+    </div>
+    <div class="form-row">
+      <label>Phone Number <span style="color:#888;font-weight:normal;">(optional)</span></label>
+      <input type="text" id="phone" placeholder="(207) 000-0000" />
+    </div>
+    <hr class="form-divider" />
+    <div class="section-title" style="font-size:11px;">Section 2 &mdash; Club Information</div>
+    <div class="form-row">
+      <label>Chess Experience Level <span class="required">*</span></label>
+      <select id="level">
+        <option value="">-- Please select --</option>
+        <option>Complete Beginner (never played)</option>
+        <option>Casual Player (know the rules)</option>
+        <option>Intermediate (plays regularly)</option>
+        <option>Advanced / Competitive</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label>Preferred Session Day <span class="required">*</span></label>
+      <select id="day">
+        <option value="">-- Please select --</option>
+        <option>Monday</option>
+        <option>Wednesday</option>
+        <option>Friday</option>
+        <option>No preference</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label>How did you hear about us? <span class="required">*</span></label>
+      <select id="source">
+        <option value="">-- Please select --</option>
+        <option>UMA Website</option>
+        <option>Instagram / Social Media</option>
+        <option>Campus Flyer / Poster</option>
+        <option>Friend or Classmate</option>
+        <option>UMA Orientation</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <hr class="form-divider" />
+    <div class="btn-row">
+      <input type="button" class="btn-submit" value="Submit Registration &raquo;" onclick="submitForm()" />
+      <input type="button" class="btn-reset" value="Clear Form" onclick="clearForm()" />
+    </div>
+  </div>
+
+  <div id="success-msg">
+    <strong>&#10003; Your registration has been received!</strong><br />
+    Thank you for joining the UMA Chess Club. A confirmation email has been sent to your UMA address.
+    We look forward to seeing you at our next open session.<br />
+    <img src="55405900-7EEE-4EDD-863B-1872FC696551.jpeg" alt="Welcome to UMA Chess Club" />
+    <em>&mdash; The UMA Chess Club Board</em>
+  </div>
+</div>
+
+<div id="side-col">
+  <div class="side-box">
+    <div class="side-box-title">&#9822; About the Club</div>
+    <div class="side-box-body">
+      <div class="side-chess">&#9812;</div>
+      The UMA Chess Club welcomes players of all skill levels &mdash; from total beginners to seasoned competitors.
+    </div>
+  </div>
+  <div class="side-box">
+    <div class="side-box-title">Open Sessions</div>
+    <div class="side-box-body">
+      <ul>
+        <li><strong>Mon &amp; Wed</strong><br />12:00 &ndash; 2:00 PM</li>
+        <li><strong>Friday</strong><br />3:00 &ndash; 5:00 PM</li>
+      </ul>
+      <br />Location: Student Center,<br />Room 114
+    </div>
+  </div>
+  <div class="side-box">
+    <div class="side-box-title">Quick Links</div>
+    <div class="side-box-body">
+      <ul>
+        <li><a href="#">Club Calendar</a></li>
+        <li><a href="#">Tournament Info</a></li>
+        <li><a href="#">Contact Advisor</a></li>
+        <li><a href="#">UMA Student Life</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="side-updated">Last updated:<br />January 14, 2012</div>
+</div>
+```
+
+  </div>
+
+  <div id="footer">
+    University of Maine at Augusta &nbsp;&bull;&nbsp; 46 University Drive, Augusta, ME 04330<br />
+    &copy; 2012 University of Maine at Augusta. All rights reserved.<br />
+    <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Accessibility</a> &nbsp;|&nbsp; <a href="#">Contact Webmaster</a>
+  </div>
+
+</div>
+<script type="text/javascript">
+  function submitForm() {
+    document.getElementById('form-area').style.display = 'none';
+    document.getElementById('success-msg').style.display = 'block';
+  }
+  function clearForm() {
+    document.getElementById('fname').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('sid').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('level').selectedIndex = 0;
+    document.getElementById('day').selectedIndex = 0;
+    document.getElementById('source').selectedIndex = 0;
+  }
+</script>
+</body>
+</html>
