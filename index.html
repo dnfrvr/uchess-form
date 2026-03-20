@@ -53,7 +53,8 @@
     .breadcrumb a:hover { text-decoration: underline; }
     #content-area { display: flex; align-items: flex-start; flex-wrap: wrap; }
     #main-col { flex: 1 1 320px; padding: 16px 18px; min-width: 0; }
-    #side-col { flex: 0 0 100%; width: 100%; background: #dfe9f3; border-left: none; border-top: 2px solid #A4D65E; padding: 14px 16px; display: flex; flex-wrap: wrap; gap: 12px; }
+    #side-col { flex: 0 0 100%; width: 100%; background: #dfe9f3; border-left: none; border-top: 2px solid #A4D65E; padding: 14px 16px 8px 16px; }
+    .side-boxes-row { display: flex; flex-wrap: wrap; gap: 12px; }
     .section-title {
       font-size: 12px; font-weight: bold; color: #003057;
       border-bottom: 2px solid #A4D65E; padding-bottom: 4px;
@@ -169,7 +170,7 @@
       <div class="section-title">Registration Form &mdash; Fall 2012</div>
       <div class="form-intro">
         <strong>Welcome!</strong> Please complete all required fields below to register as a member of the UMA Chess Club.
-        A confirmation will be sent to your UMA email address. For questions, contact us at <a href="mailto:uma.chessclub@maine.edu">uma.chessclub@maine.edu</a>.
+        A confirmation will be sent to your UMA email address.
       </div>
 
 ```
@@ -264,32 +265,34 @@
 </div>
 
 <div id="side-col">
-  <div class="side-box">
-    <div class="side-box-title">&#9822; About the Club</div>
-    <div class="side-box-body">
-      <div class="side-chess">&#9812;</div>
-      The UMA Chess Club welcomes players of all skill levels &mdash; from total beginners to seasoned competitors.
+  <div class="side-boxes-row">
+    <div class="side-box">
+      <div class="side-box-title">&#9822; About the Club</div>
+      <div class="side-box-body">
+        <div class="side-chess">&#9812;</div>
+        The UMA Chess Club welcomes players of all skill levels &mdash; from total beginners to seasoned competitors.
+      </div>
     </div>
-  </div>
-  <div class="side-box">
-    <div class="side-box-title">Open Sessions</div>
-    <div class="side-box-body">
-      <ul>
-        <li><strong>Mon &amp; Wed</strong><br />12:00 &ndash; 2:00 PM</li>
-        <li><strong>Friday</strong><br />3:00 &ndash; 5:00 PM</li>
-      </ul>
-      <br />Location: Student Center,<br />Room 114
+    <div class="side-box">
+      <div class="side-box-title">Open Sessions</div>
+      <div class="side-box-body">
+        <ul>
+          <li><strong>Mon &amp; Wed</strong><br />12:00 &ndash; 2:00 PM</li>
+          <li><strong>Friday</strong><br />3:00 &ndash; 5:00 PM</li>
+        </ul>
+        <br />Location: Student Center,<br />Room 114
+      </div>
     </div>
-  </div>
-  <div class="side-box">
-    <div class="side-box-title">Quick Links</div>
-    <div class="side-box-body">
-      <ul>
-        <li><a href="#">Club Calendar</a></li>
-        <li><a href="#">Tournament Info</a></li>
-        <li><a href="#">Contact Advisor</a></li>
-        <li><a href="#">UMA Student Life</a></li>
-      </ul>
+    <div class="side-box">
+      <div class="side-box-title">Quick Links</div>
+      <div class="side-box-body">
+        <ul>
+          <li><a href="#">Club Calendar</a></li>
+          <li><a href="#">Tournament Info</a></li>
+          <li><a href="#">Contact Advisor</a></li>
+          <li><a href="#">UMA Student Life</a></li>
+        </ul>
+      </div>
     </div>
   </div>
   <div class="side-updated">Last updated:<br />September 8, 2012</div>
@@ -315,12 +318,4 @@
     document.getElementById('fname').value = '';
     document.getElementById('email').value = '';
     document.getElementById('sid').value = '';
-    document.getElementById('phone').value = '';
-    document.getElementById('elo').value = '';
-    document.getElementById('level').selectedIndex = 0;
-    document.getElementById('day').selectedIndex = 0;
-    document.getElementById('source').selectedIndex = 0;
-  }
-</script>
-</body>
-</html>
+    document.getElementById('phone').valu
